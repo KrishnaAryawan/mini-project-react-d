@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 function Menu() {
   const { data, loading, error } = useQuery(gql`
     query MyQuery {
-      miniproject {
+      makanan {
         id
         name
         food_pictures
@@ -44,10 +44,10 @@ function Menu() {
           }}
         >
           <Grid container m="20px" spacing={5}>
-            {data?.miniproject.map((item) => (
+            {data?.makanan.map((item) => (
               <Grid item>
                 <MenuCard
-                  Gambar={item.food_pictures}
+                  gambar={item.food_pictures}
                   nama={item.name}
                   deskripsi={item.description}
                   price={item.price}
